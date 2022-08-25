@@ -1,0 +1,8 @@
+!function (p) { "use strict"; function t() { } t.prototype.send = function (t, i, o, e, n, a, s, r) { var c = { heading: t, text: i, position: o, loaderBg: e, icon: n, hideAfter: a = a || 3e3, stack: s = s || 1 }; r && (c.showHideTransition = r), console.log(c), p.toast().reset("all"), p.toast(c) }, p.NotificationApp = new t, p.NotificationApp.Constructor = t }(window.jQuery), function (i) {
+    "use strict";
+    i("#toastr-one").on("click", function (t) { i.NotificationApp.send("Oh snap!", "Gagal Menambah Data.", "top-right", "#3b98b5", "info") }), i("#toastr-two").on("click", function (t) { i.NotificationApp.send("Heads up!", "Check below fields please.", "top-center", "#da8609", "warning") }),
+        i("#toastr-three").on("click", function (t) { i.NotificationApp.send("Well Done!", "Berhasil Menambah Data", "top-right", "#5ba035", "success") }),
+        i("#delete-wrong").on("click", function (t) { i.NotificationApp.send("Oh snap!", "Gagal Menghapus Data", "top-right", "#bf441d", "error") }),
+        i("#delete-success").on("click", function (t) { i.NotificationApp.send("Well Done!", "Data Telah Terhapus", "top-right", "#5ba035", "success") }),
+        i("#toastr-ten").on("click", function (t) { i.NotificationApp.send("Plain transition", "Set the `showHideTransition` property to fade|plain|slide to achieve different transitions.", "top-right", "#3b98b5", "info", 3e3, 1, "plain") })
+}(window.jQuery);
